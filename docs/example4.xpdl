@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="505ccc07-ae4e-4c01-a10d-cc39a8c1f041" Name="DrawActSet-17" xmlns="http://www.wfmc.org/2009/XPDL2.2">
+
+    <PackageHeader>
+        <XPDLVersion>2.2</XPDLVersion>
+        <Vendor>Bizagi Process Modeler.</Vendor>
+        <Created>2013-06-27T05:15:16.8673695+03:00</Created>
+        <ModificationDate>2014-02-24T16:22:28.2309005+02:00</ModificationDate>
+        <Description>DrawActSet-17</Description>
+        <Documentation />
+     </PackageHeader>
+
+    <RedefinableHeader>
+        <Author>xli4</Author>
+        <Version>1.0</Version>
+        <Countrykey>CO</Countrykey>
+    </RedefinableHeader>
+
+    <ExternalPackages />
+
+    <Pools>
+        <Pool Id="f53054b8-d230-4962-afe7-e9f28a05ee92" Name="Main Process" Process="e1f310ea-92d0-4a8b-b7bf-5a5623f4cd4c" BoundaryVisible="false">
+            <Lanes />
+            <NodeGraphicsInfos>
+                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="350" Width="700" BorderColor="-16777216" FillColor="-1">
+                    <Coordinates XCoordinate="0" YCoordinate="0" />
+                </NodeGraphicsInfo>
+            </NodeGraphicsInfos>
+        </Pool>
+
+        <Pool Id="6572933a-32df-4c19-a2d4-8ba4b5df2c79" Name="Process 1" Process="449b372c-c515-43f6-83ef-110db1875760" BoundaryVisible="true">
+            <Lanes />
+            <NodeGraphicsInfos>
+                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="1050" Width="2660" BorderColor="-16777216" FillColor="-1">
+                    <Coordinates XCoordinate="100" YCoordinate="60" />
+                </NodeGraphicsInfo>
+            </NodeGraphicsInfos>
+        </Pool>
+    </Pools>
+
+    <Associations />
+    <Artifacts />
+
+    <WorkflowProcesses>
+
+        <WorkflowProcess Id="e1f310ea-92d0-4a8b-b7bf-5a5623f4cd4c" Name="Main Process">
+            <ProcessHeader>
+                <Created>2014-02-24T16:23:39.1628066+02:00</Created>
+                <Description />
+            </ProcessHeader>
+
+            <RedefinableHeader>
+                <Author />
+                <Version />
+                <Countrykey>CO</Countrykey>
+            </RedefinableHeader>
+
+            <ActivitySets />
+            <DataInputOutputs />
+            <ExtendedAttributes />
+        </WorkflowProcess>
+
+        <WorkflowProcess Id="449b372c-c515-43f6-83ef-110db1875760" Name="Process 1">
+            <ProcessHeader>
+                <Created>2014-02-24T16:23:39.1628066+02:00</Created>
+                <Description />
+            </ProcessHeader>
+
+            <RedefinableHeader>
+                <Author />
+                <Version />
+                <Countrykey>CO</Countrykey>
+            </RedefinableHeader>
+
+            <ActivitySets>
+                <ActivitySet Id="a183d39a-8e5b-4750-8ff3-dce0292fd011" Name="Collapsed adhoc loop subprocess" AdHoc="true">
+                    <Associations />
+                    <Artifacts />
+                    <Activities />
+                    <Transitions />
+                </ActivitySet>
+
+                <ActivitySet Id="d41304fb-de39-48e9-bff4-a58307b47aee" Name="expanded adhoc loop subprocess " AdHoc="true">
+                    <Associations />
+                    <Artifacts />
+
+                    <Activities>
+                        <Activity Id="e05c6430-b2b6-4ee2-8d9a-319a26de5295" Name="">
+                            <Description />
+                            <Event>
+                                <StartEvent Trigger="None" />
+                            </Event>
+                            <Documentation />
+
+                            <NodeGraphicsInfos>
+                                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-10311914" FillColor="-1638505">
+                                    <Coordinates XCoordinate="140" YCoordinate="140" />
+                                </NodeGraphicsInfo>
+                            </NodeGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Activity>
+
+                        <Activity Id="9618a8e9-acd2-474b-8eb3-399086bb808e" Name="Task 1">
+                            <Description />
+
+                            <Implementation>
+                                <Task />
+                            </Implementation>
+
+                            <Performers />
+                            <Documentation />
+                            <Loop LoopType="None" />
+
+                            <NodeGraphicsInfos>
+                                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+                                    <Coordinates XCoordinate="260" YCoordinate="125" />
+                                </NodeGraphicsInfo>
+                            </NodeGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Activity>
+
+                        <Activity Id="6dbd9acf-9ae8-46d6-acf0-96294c2ea80b" Name="">
+                            <Description />
+
+                            <Event>
+                                <EndEvent Result="None" />
+                            </Event>
+
+                            <Documentation />
+
+                            <NodeGraphicsInfos>
+                                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-6750208" FillColor="-1135958">
+                                    <Coordinates XCoordinate="460" YCoordinate="140" />
+                                </NodeGraphicsInfo>
+                            </NodeGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Activity>
+                    </Activities>
+
+                    <Transitions>
+                        <Transition Id="fb72c095-c7b8-49af-95b8-a79073251f32" From="9618a8e9-acd2-474b-8eb3-399086bb808e" To="6dbd9acf-9ae8-46d6-acf0-96294c2ea80b">
+                            <Condition />
+                            <Description />
+
+                            <ConnectorGraphicsInfos>
+                                <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                                    <Coordinates XCoordinate="350" YCoordinate="155" />
+                                    <Coordinates XCoordinate="460" YCoordinate="155" />
+                                </ConnectorGraphicsInfo>
+                            </ConnectorGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Transition>
+
+                        <Transition Id="fc822305-cd9f-4083-a3fe-aca78857c96c" From="e05c6430-b2b6-4ee2-8d9a-319a26de5295" To="9618a8e9-acd2-474b-8eb3-399086bb808e">
+                            <Condition />
+                            <Description />
+
+                            <ConnectorGraphicsInfos>
+                                <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                                    <Coordinates XCoordinate="170" YCoordinate="155" />
+                                    <Coordinates XCoordinate="260" YCoordinate="155" />
+                                </ConnectorGraphicsInfo>
+                            </ConnectorGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Transition>
+                    </Transitions>
+                </ActivitySet>
+
+                <ActivitySet Id="9ae290f2-6340-43ca-a987-3b90489ddf2c" Name="collapsed adhoc parrallel subprocess" AdHoc="true">
+                    <Associations />
+                    <Artifacts />
+                    <Activities />
+                    <Transitions />
+                </ActivitySet>
+
+                <ActivitySet Id="722c737d-7166-405d-83ec-3e8e6d6723ab" Name="expanded adhoc parrallel subprocess" AdHoc="true">
+                    <Associations />
+                    <Artifacts />
+
+                    <Activities>
+                        <Activity Id="420b73c5-3395-4c7a-acc3-ed876a2f8c3b" Name="">
+                            <Description />
+
+                            <Event>
+                                <EndEvent Result="None" />
+                            </Event>
+
+                            <Documentation />
+
+                            <NodeGraphicsInfos>
+                                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-6750208" FillColor="-1135958">
+                                    <Coordinates XCoordinate="553" YCoordinate="217" />
+                                </NodeGraphicsInfo>
+                            </NodeGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Activity>
+
+                        <Activity Id="d58ed06d-e2b2-4031-a9d1-c6e22c2828ba" Name="Task 1">
+                            <Description />
+
+                            <Implementation>
+                                <Task />
+                            </Implementation>
+
+                            <Performers />
+                            <Documentation />
+                            <Loop LoopType="None" />
+
+                            <NodeGraphicsInfos>
+                                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+                                    <Coordinates XCoordinate="320" YCoordinate="202" />
+                                </NodeGraphicsInfo>
+                            </NodeGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Activity>
+
+                        <Activity Id="733e686a-92a5-4830-93bb-af2dff0e1036" Name="">
+                            <Description />
+
+                            <Event>
+                                <StartEvent Trigger="None" />
+                            </Event>
+
+                            <Documentation />
+
+                            <NodeGraphicsInfos>
+                                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-10311914" FillColor="-1638505">
+                                    <Coordinates XCoordinate="180" YCoordinate="217" />
+                                </NodeGraphicsInfo>
+                            </NodeGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Activity>
+                    </Activities>
+
+                    <Transitions>
+                        <Transition Id="60557ac3-81d5-443e-b379-2c4c3c99c31d" From="d58ed06d-e2b2-4031-a9d1-c6e22c2828ba" To="420b73c5-3395-4c7a-acc3-ed876a2f8c3b">
+                            <Condition />
+                            <Description />
+
+                            <ConnectorGraphicsInfos>
+                                <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                                    <Coordinates XCoordinate="410" YCoordinate="232" />
+                                    <Coordinates XCoordinate="553" YCoordinate="232" />
+                                </ConnectorGraphicsInfo>
+                            </ConnectorGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Transition>
+
+                        <Transition Id="91ad1f56-cb28-447a-8042-0352ee93e3a6" From="733e686a-92a5-4830-93bb-af2dff0e1036" To="d58ed06d-e2b2-4031-a9d1-c6e22c2828ba">
+                            <Condition />
+                            <Description />
+
+                            <ConnectorGraphicsInfos>
+                                <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                                    <Coordinates XCoordinate="210" YCoordinate="232" />
+                                    <Coordinates XCoordinate="320" YCoordinate="232" />
+                                </ConnectorGraphicsInfo>
+                            </ConnectorGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Transition>
+                    </Transitions>
+                </ActivitySet>
+
+                <ActivitySet Id="421f2f29-28a1-4f4e-b483-45c46b28d8cd" Name="collapsed adhoc sequential subprocess" AdHoc="true">
+                    <Associations />
+                    <Artifacts />
+                    <Activities />
+                    <Transitions />
+                </ActivitySet>
+
+                <ActivitySet Id="8d76b198-d08f-4577-8e0d-10c35c84f642" Name="expanded adhoc sequential subprocess" AdHoc="true">
+                    <Associations />
+                    <Artifacts />
+
+                    <Activities>
+                        <Activity Id="4245f23f-55a4-4213-b30a-13ff0385f894" Name="">
+                            <Description />
+
+                            <Event>
+                                <EndEvent Result="None" />
+                            </Event>
+
+                            <Documentation />
+
+                            <NodeGraphicsInfos>
+                                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-6750208" FillColor="-1135958">
+                                    <Coordinates XCoordinate="580" YCoordinate="240" />
+                                </NodeGraphicsInfo>
+                            </NodeGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Activity>
+
+                        <Activity Id="1925218c-9f6c-4812-9a6a-d9c5d8d5cace" Name="Task 1">
+                            <Description />
+
+                            <Implementation>
+                                <Task />
+                            </Implementation>
+
+                            <Performers />
+                            <Documentation />
+                            <Loop LoopType="None" />
+
+                            <NodeGraphicsInfos>
+                                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+                                    <Coordinates XCoordinate="320" YCoordinate="225" />
+                                </NodeGraphicsInfo>
+                            </NodeGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Activity>
+
+                        <Activity Id="522a4f7e-659e-4043-b331-0b87cf317ec4" Name="">
+                            <Description />
+
+                            <Event>
+                                <StartEvent Trigger="None" />
+                            </Event>
+
+                            <Documentation />
+
+                            <NodeGraphicsInfos>
+                                <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-10311914" FillColor="-1638505">
+                                    <Coordinates XCoordinate="180" YCoordinate="240" />
+                                </NodeGraphicsInfo>
+                            </NodeGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Activity>
+                    </Activities>
+
+                    <Transitions>
+                        <Transition Id="67fb231d-72b3-4a83-a4b9-f220d98c3bd4" From="1925218c-9f6c-4812-9a6a-d9c5d8d5cace" To="4245f23f-55a4-4213-b30a-13ff0385f894">
+                            <Condition />
+                            <Description />
+
+                            <ConnectorGraphicsInfos>
+                                <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                                    <Coordinates XCoordinate="410" YCoordinate="255" />
+                                    <Coordinates XCoordinate="580" YCoordinate="255" />
+                                </ConnectorGraphicsInfo>
+                            </ConnectorGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Transition>
+
+                        <Transition Id="018c5d8d-edb0-4936-9d33-8f48b49728ce" From="522a4f7e-659e-4043-b331-0b87cf317ec4" To="1925218c-9f6c-4812-9a6a-d9c5d8d5cace">
+                            <Condition />
+                            <Description />
+
+                            <ConnectorGraphicsInfos>
+                                <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                                    <Coordinates XCoordinate="210" YCoordinate="255" />
+                                    <Coordinates XCoordinate="320" YCoordinate="255" />
+                                </ConnectorGraphicsInfo>
+                            </ConnectorGraphicsInfos>
+
+                            <ExtendedAttributes />
+                        </Transition>
+                    </Transitions>
+                </ActivitySet>
+
+            </ActivitySets>
+
+            <DataInputOutputs />
+
+            <Activities>
+
+                <Activity Id="31b93d6a-1165-4d82-ba03-46dff7b7d832" Name="">
+                    <Description />
+
+                    <Event>
+                        <StartEvent Trigger="None" />
+                    </Event>
+
+                    <Documentation />
+
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-10311914" FillColor="-1638505">
+                            <Coordinates XCoordinate="320" YCoordinate="295" />
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Activity>
+
+                <Activity Id="f2f9c063-3343-4273-9966-e685b15368b4" Name="">
+                    <Description />
+
+                    <Event>
+                        <EndEvent Result="None" />
+                    </Event>
+
+                    <Documentation />
+
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="30" Width="30" BorderColor="-6750208" FillColor="-1135958">
+                            <Coordinates XCoordinate="1560" YCoordinate="715" />
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Activity>
+
+                <Activity Id="a183d39a-8e5b-4750-8ff3-dce0292fd011" Name="Collapsed adhoc loop subprocess">
+                    <Description />
+                    <BlockActivity ActivitySetId="a183d39a-8e5b-4750-8ff3-dce0292fd011" />
+                    <Performers />
+                    <Documentation />
+                    <Loop LoopType="Standard" />
+
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+                            <Coordinates XCoordinate="660" YCoordinate="280" />
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Activity>
+
+                <Activity Id="d41304fb-de39-48e9-bff4-a58307b47aee" Name="expanded adhoc loop subprocess ">
+                    <Description />
+                    <BlockActivity ActivitySetId="d41304fb-de39-48e9-bff4-a58307b47aee" View="EXPANDED" />
+                    <Performers />
+                    <Documentation />
+                    <Loop LoopType="Standard" />
+
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+                            <Coordinates XCoordinate="860" YCoordinate="220" />
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Activity>
+
+                <Activity Id="9ae290f2-6340-43ca-a987-3b90489ddf2c" Name="collapsed adhoc parrallel subprocess">
+                    <Description />
+                    <BlockActivity ActivitySetId="9ae290f2-6340-43ca-a987-3b90489ddf2c" />
+                    <Performers />
+                    <Documentation />
+                    <Loop LoopType="MultiInstance" />
+
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+                            <Coordinates XCoordinate="1500" YCoordinate="280" />
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Activity>
+
+                <Activity Id="722c737d-7166-405d-83ec-3e8e6d6723ab" Name="expanded adhoc parrallel subprocess">
+                    <Description />
+                    <BlockActivity ActivitySetId="722c737d-7166-405d-83ec-3e8e6d6723ab" View="EXPANDED" />
+                    <Performers />
+                    <Documentation />
+                    <Loop LoopType="MultiInstance" />
+
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+                            <Coordinates XCoordinate="280" YCoordinate="640" />
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Activity>
+
+                <Activity Id="421f2f29-28a1-4f4e-b483-45c46b28d8cd" Name="collapsed adhoc sequential subprocess">
+                    <Description />
+                    <BlockActivity ActivitySetId="421f2f29-28a1-4f4e-b483-45c46b28d8cd" />
+                    <Performers />
+                    <Documentation />
+
+                    <Loop LoopType="MultiInstance">
+                        <LoopMultiInstance LoopCounter="0" MI_Ordering="Sequential" />
+                    </Loop>
+
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+                            <Coordinates XCoordinate="720" YCoordinate="700" />
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Activity>
+
+                <Activity Id="8d76b198-d08f-4577-8e0d-10c35c84f642" Name="expanded adhoc sequential subprocess">
+                    <Description />
+                    <BlockActivity ActivitySetId="8d76b198-d08f-4577-8e0d-10c35c84f642" View="EXPANDED" />
+                    <Performers />
+                    <Documentation />
+
+                    <Loop LoopType="MultiInstance">
+                        <LoopMultiInstance LoopCounter="0" MI_Ordering="Sequential" />
+                    </Loop>
+
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo ToolId="BizAgi_Process_Modeler" Height="60" Width="90" BorderColor="-16553830" FillColor="-1249281">
+                            <Coordinates XCoordinate="960" YCoordinate="640" />
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Activity>
+            </Activities>
+
+            <Transitions>
+
+                <Transition Id="c6bd12fc-5a5c-48bc-82be-7661046bf0ea" From="31b93d6a-1165-4d82-ba03-46dff7b7d832" To="a183d39a-8e5b-4750-8ff3-dce0292fd011">
+                    <Condition />
+                    <Description />
+
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                            <Coordinates XCoordinate="350" YCoordinate="310" />
+                            <Coordinates XCoordinate="660" YCoordinate="310" />
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Transition>
+
+                <Transition Id="69cee8d5-0c81-49a8-b4a6-d90c406940c4" From="a183d39a-8e5b-4750-8ff3-dce0292fd011" To="d41304fb-de39-48e9-bff4-a58307b47aee">
+                    <Condition />
+                    <Description />
+
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                            <Coordinates XCoordinate="750" YCoordinate="310" />
+                            <Coordinates XCoordinate="860" YCoordinate="310" />
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Transition>
+
+                <Transition Id="9f5c6b5e-55c9-4125-9232-79706e087849" From="d41304fb-de39-48e9-bff4-a58307b47aee" To="9ae290f2-6340-43ca-a987-3b90489ddf2c">
+                    <Condition />
+                    <Description />
+
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                            <Coordinates XCoordinate="1210" YCoordinate="310" />
+                            <Coordinates XCoordinate="1500" YCoordinate="310" />
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Transition>
+
+                <Transition Id="50c6120a-3588-44c0-b25d-6dc5cfbbaf70" From="9ae290f2-6340-43ca-a987-3b90489ddf2c" To="722c737d-7166-405d-83ec-3e8e6d6723ab">
+                    <Condition />
+                    <Description />
+
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                            <Coordinates XCoordinate="1545" YCoordinate="340" />
+                            <Coordinates XCoordinate="1545" YCoordinate="450" />
+                            <Coordinates XCoordinate="425" YCoordinate="450" />
+                            <Coordinates XCoordinate="425" YCoordinate="640" />
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Transition>
+
+                <Transition Id="3ff0521b-c736-46c4-a546-7d3e30741321" From="722c737d-7166-405d-83ec-3e8e6d6723ab" To="421f2f29-28a1-4f4e-b483-45c46b28d8cd">
+                    <Condition />
+                    <Description />
+
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                            <Coordinates XCoordinate="570" YCoordinate="730" />
+                            <Coordinates XCoordinate="720" YCoordinate="730" />
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Transition>
+
+                <Transition Id="3f625efd-94dc-4edb-b612-897fd669e708" From="421f2f29-28a1-4f4e-b483-45c46b28d8cd" To="8d76b198-d08f-4577-8e0d-10c35c84f642">
+                    <Condition />
+                    <Description />
+
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                            <Coordinates XCoordinate="810" YCoordinate="730" />
+                            <Coordinates XCoordinate="960" YCoordinate="730" />
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Transition>
+
+                <Transition Id="a88a1f94-b7c9-4a5e-b492-e9e473ee0e35" From="8d76b198-d08f-4577-8e0d-10c35c84f642" To="f2f9c063-3343-4273-9966-e685b15368b4">
+                    <Condition />
+                    <Description />
+
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo ToolId="BizAgi_Process_Modeler" BorderColor="-16777216">
+                            <Coordinates XCoordinate="1330" YCoordinate="730" />
+                            <Coordinates XCoordinate="1560" YCoordinate="730" />
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+
+                    <ExtendedAttributes />
+                </Transition>
+
+            </Transitions>
+
+            <ExtendedAttributes />
+
+        </WorkflowProcess>
+
+    </WorkflowProcesses>
+
+    <ExtendedAttributes />
+</Package>

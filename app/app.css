@@ -1,0 +1,627 @@
+/* app css stylesheet */
+
+body {
+    background-color: #FFFFFF/*#0C6AA6*/ ;
+    font-size: 15px;
+    color: #385b94;
+    letter-spacing: 0.1em;
+    font-family: 'Comfortaa', cursive;
+}
+
+.center {
+    text-align: center;
+}
+
+.name {
+    font-weight: bolder;
+}
+
+.green {
+    color: #FFA478;
+}
+
+a {
+   color: #FFA478; 
+}
+
+a:hover {
+    color: white;
+}
+
+.inline {
+  display: inline-block;
+  vertical-align: middle;  
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.material-icons {
+  margin-right: 3%;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+/*
+===================================
+        NAVIGATION MENU
+===================================
+*/
+
+.logo {
+  width: 15%;
+  margin: 0%;
+  padding: 0;
+}
+
+.btn {
+  background-color: #385b94;
+  border-color: #FFA478;
+  color: #FFF;
+}
+
+.btn:hover {
+  color: #FFA478;
+}
+
+.btn:focus {
+  border-color: #FFA478 !important;
+  color: #FFA478;
+}
+
+.btn-icon {
+  margin-right: 3%;
+  color: #FFA478;
+}
+
+.navbar a {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.navbar{ 
+  background-image: none;
+}
+
+.navbar-brand{
+  margin: 0;
+}
+
+.navbar-custom {
+  padding: 1% 10% 1% 10%;
+  background-color: #385b94 !important;
+  border-color: #385b94;
+  color: #FFF !important;
+}
+
+#nav-header ul{
+    border: 0.15em solid #FFA478;
+    margin: 0.5em;
+    border-radius: 1em;
+}
+
+#main-menu li a{
+    color: white;
+    padding: 1em 0.5em;
+    border-radius: 0px;
+}
+
+#main-menu li a:hover{
+    background-color: #FFA478;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/*
+===================================
+        FIRST VIEW
+===================================
+*/
+
+.send-button {
+  padding: 10% 5% 10% 0%;
+}
+
+.index-icon {
+  width: 80%;
+  min-width: 80%;
+  padding: 4%;
+}
+
+.how-to-use-icon {
+  margin-bottom: 1.5%;
+  width: 25%;
+  min-width: 25%;
+}
+
+.warning-icon {
+  margin: 2% 0% 2% 0%;
+  width: 22%;
+  min-width: 22%;
+}
+
+.warning-text {
+  margin-top: 5%;
+  font-size: 1.3em;
+}
+
+.step-icon {
+  margin-bottom: 12%;
+}
+
+.step-icon-M {
+  width: 33%;
+  min-width: 33%;
+}
+
+.step-icon-L {
+  width: 82%;
+  min-width: 82%;
+}
+
+.step-icon-XL {
+  width: 95%;
+  min-width: 95%;
+}
+
+.send-icon {
+  margin: 3% 0% 3% 0%;
+  width: 70%;
+  min-width: 70%;
+}
+
+.tool-icon {
+  padding: 15% 0% 0% 5%;
+  width: 70%;
+  min-width: 70%;
+}
+
+/* here begins the selection file area attributes */
+
+#selection-area {
+    display: flex;
+    align-items: center;
+}
+
+
+#selection-area2 h1, #selection-area h1 {
+    font-size: 250%;
+    padding: 0.2em;
+    margin-bottom: 0.25em;
+    border-bottom: 0.15em solid #FFA478;
+    text-align: center;
+}
+
+/* here ends the selection file area attributes */
+
+/* here ends the button attributes */
+
+/* Here begins the Modal Content/Box attributes */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-title {
+  color: #385b94;
+}
+
+.modal-content {
+    background-color: #9EABCC;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close-box {
+    color: #FFA478;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-box:hover,
+.close-box:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.help {
+   color: #FFA478;
+   background-color: #485F99/*#0C6AA6*/;   
+   border: 0.15em solid #FFA478;
+   margin: 0.5em;
+   border-radius: 1em;
+
+}
+
+.modal-window {
+    color: #FFA478;
+}
+
+/* Here ends the Modal Content/Box attributes */
+
+/* here begins the actors and tasks attributes */
+#action-box,#inner-action-box, #image-area, #disabled-activities {
+    background-color: #CCA69E;
+    color: inherit;
+    border: none;
+    background-image: none;    
+}
+
+#action-box {
+  width: 53%;
+}
+
+#inner-action-box {
+    padding: 0.6em;
+    overflow-y: scroll;
+    height: 40em;
+}
+
+#image-area {
+    float: right;
+}
+
+#show-app-content {
+        /* border-top: 0.02em solid #006F3A; */
+    background: #FFA478;
+    padding: 0.8em 1.2em;
+    box-sizing: border-box;
+    -webkit-border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    border-radius: 0.8em;
+    /* -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0; */
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    /* box-shadow: rgba(0,0,0,1) 0 1px 0; */
+    /* text-shadow: rgba(0,0,0,.4) 0 1px 0; */
+    color: white;
+    /* font-size: 0.8em; */
+    text-decoration: none;
+    vertical-align: middle;
+    border: 0px solid transparent;
+}
+
+#show-app-content:hover {
+    background: white;
+    color: #FFA478;
+}
+
+#show-app-content:active {
+    background-color: #9eabcc;
+}
+
+/* here ends the button attributes */
+
+.tasks {
+    padding: 2em 0 1em 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.colorSelector {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background: url(resources/colorpicker/images/select.png);
+}
+
+
+.colorSelector div {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    background: url(resources/colorpicker/images/select.png) center;
+}
+
+.tasks:last-child {
+    border-bottom: none;
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
+/* Here begins the Modal Content/Box attributes */
+
+.help-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% 10% auto; /* 15% from the top and centered */
+    padding: 1em;
+    border: 10px solid #385b94;
+    border-radius: 35px;
+    width: 40em;
+    /*height: 15em*/
+    box-sizing: border-box; /* Could be more or less, depending on screen size */
+}
+
+#canvasModal .modal-content {
+    width: 80em;
+    height: 55em;
+}
+.drawing {
+    margin-top: 30px;
+}
+
+.modal-body > input {
+    height: 3em;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 1em;
+    padding: 0 1em;
+}
+
+/* The Close Button */
+.close-box {
+    color: #FFA478;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn-warning:hover, .btn-warning:focus {
+    color: #f0ad4e;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.blue-button{
+    background: #385b94;
+    border-color: transparent;
+    color: white;
+}
+
+.blue-button:hover, .orange-button:focus {
+    background: white;
+    border-color: transparent;
+    color: #385b94;
+}
+
+.dropdown{
+    margin: 0 1em 0 1em;   
+}
+
+.dropdown-menu-app {
+    color: #485F99;;
+}
+
+.btn-default.active.focus, .btn-default.active:focus, 
+.btn-default.active:hover, .btn-default:active.focus, 
+.btn-default:active:focus, .btn-default:active:hover, 
+.open>.dropdown-toggle.btn-default.focus, 
+.open>.dropdown-toggle.btn-default:focus, 
+.open>.dropdown-toggle.btn-default:hover {
+    background: white;
+    border-color: transparent;
+    color: #FFA478;
+}
+
+.modal-window {
+    color: #FFA478;
+}
+
+/* Here ends the Modal Content/Box attributes */
+
+/* here begins the actors and tasks attributes */
+#action-box,#inner-action-box, #image-area, #disabled-activities {
+    background-color: #385b94;
+    color: inherit;
+    border: none;
+    background-image: none;
+}
+
+#inner-action-box, #inner-disabled {
+    padding: 0.6em;
+    overflow-y: scroll;
+    height: 40em;
+}
+
+#inner-disabled{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
+} 
+
+#image-area {
+    float: right;
+}
+
+.actor {
+  margin-bottom: 5%;
+}
+
+.actor, .disabled-tasks {
+    margin: 0.5em 0;
+    padding: 1em;
+    background-color: #FFF;
+    border-radius: 1em;
+}
+
+.actor-box {
+    margin-bottom: 5% !important;
+    border-radius: 1em;
+}
+
+.tasks {
+  padding-bottom: 0% !important;
+}
+
+.actor {
+  margin-bottom: 5%;
+}
+
+#action-box, #disabled-activities {
+    padding: 0 0.09em;
+    border-radius: 1em;
+    margin: 0.5em;
+}
+
+.tasks {
+    padding: 1em 0 1em 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.tasks:last-child {
+    border-bottom: none;
+}
+
+.modal-body {
+    color: #385b94;
+}
+
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    background-image: none;
+    background-repeat: no-repeat;
+}
+
+.btn-warning:hover, .btn-warning:focus {
+    color: #f0ad4e;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.orange-button{
+    background: #FFA478;
+    border-color: transparent;
+    color: white;
+}
+
+.orange-button:hover, .orange-button:focus {
+    background: white;
+    border-color: transparent;
+    color: #FFA478;
+}
+
+.dropdown{
+    margin: 0 1em 0 1em;   
+}
+
+.btn-default.active.focus, .btn-default.active:focus, 
+.btn-default.active:hover, .btn-default:active.focus, 
+.btn-default:active:focus, .btn-default:active:hover, 
+.open>.dropdown-toggle.btn-default.focus, 
+.open>.dropdown-toggle.btn-default:focus, 
+.open>.dropdown-toggle.btn-default:hover {
+    background: white;
+    border-color: transparent;
+    color: #FFA478;
+}
+
+
+
+/* here ends the actors and tasks attributes */
+
+/*
+===================================
+        SECOND VIEW
+===================================
+*/
+
+.about-icon {
+  width: 9%;
+  min-width: 9%;
+}
+
+.about-icon-L {
+  width: 20%;
+  min-width: 20%;
+}
+
+.about-icon-XL {
+  width: 35%;
+  min-width: 35%;
+}
+
+.about-text {
+  padding: 0% 10% 1% 10%;
+  text-align: center;
+}
+
+.about-menu a {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+}
+
+.about-menu a:hover {
+    background-color: #FFA478;
+    color: inherit;
+    border: none;
+}
+
+.about-menu {
+    border: 0.15em solid #FFA478;
+    margin: 0.5em;
+    border-radius: 0.5em;
+}
+
+#atention {
+    float: right;
+}
+
+
+.draw-icon {
+  max-width: 100%;
+  width: 80%;
+  min-width: 80%;
+}
+
+.colorpicker {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+} 
+
+.commentBlock span{
+    position: relative;
+    top: 31px;
+}
+
+.commentBlock hr{
+    position: relative;
+    top: 50px;
+}
+
+
+
+

@@ -1,0 +1,289 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns:iflow="http://www.i-flow.com" xmlns:deprecated="http://www.wfmc.org/2002/XPDL1.0" xmlns="http://www.wfmc.org/2004/XPDL2.0alpha" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2004/XPDL2.0alpha http://www.wfmc.org/standards/docs/TC-1025_bpmnxpdl_24.xsd" Id="27" Name="Example6_2.0_Extended">
+  <PackageHeader>
+    <XPDLVersion>2.0</XPDLVersion>
+    <Vendor>Fujitsu Software Corporation</Vendor>
+    <Created>Wed Jan 25 05:04:43 PST 2006</Created>
+  </PackageHeader>
+  <RedefinableHeader PublicationStatus="UNDER_TEST"/>
+  <Script Type="text/javascript"/>
+  <Participants>
+    <Participant Id="bpm" Name="bpm">
+      <ParticipantType Type="RESOURCE"/>
+    </Participant>
+    <Participant Id="role" Name="role">
+      <ParticipantType Type="ROLE"/>
+    </Participant>
+  </Participants>
+  <Pools>
+    <Pool Process="Example6_2.0_Extended" Id="1" Name="" BoundaryVisible="false" Orientation="HORIZONTAL">
+      <Lanes>
+        <Lane Id="1" Name="">
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo>
+              <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Lane>
+      </Lanes>
+      <NodeGraphicsInfos>
+        <NodeGraphicsInfo>
+          <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+        </NodeGraphicsInfo>
+      </NodeGraphicsInfos>
+    </Pool>
+  </Pools>
+  <WorkflowProcesses>
+    <WorkflowProcess Id="27" Name="Example6_2.0_Extended" AccessLevel="PUBLIC">
+      <ProcessHeader>
+        <Description/>
+      </ProcessHeader>
+      <RedefinableHeader PublicationStatus="UNDER_TEST">
+        <Author>bpm</Author>
+        <Version>1.0</Version>
+        <Responsibles>
+          <Responsible>bpm</Responsible>
+        </Responsibles>
+      </RedefinableHeader>
+      <DataFields>
+        <DataField Id="Name" Name="Name" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="STRING"/>
+          </DataType>
+          <InitialValue/>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="IsWorkItemUDA">
+              <IsWorkItemUDA Value="FALSE"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="isReadOnly">
+              <isReadOnly Value="FALSE"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="IflowDataType">
+              <IflowDataType Type="STRING"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="Address" Name="Address" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="STRING"/>
+          </DataType>
+          <InitialValue/>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="IsWorkItemUDA">
+              <IsWorkItemUDA Value="FALSE"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="isReadOnly">
+              <isReadOnly Value="FALSE"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="IflowDataType">
+              <IflowDataType Type="STRING"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="LoanAmount" Name="Loan Amount" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="FLOAT"/>
+          </DataType>
+          <InitialValue>0.0</InitialValue>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="IsWorkItemUDA">
+              <IsWorkItemUDA Value="FALSE"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="isReadOnly">
+              <isReadOnly Value="FALSE"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="IflowDataType">
+              <IflowDataType Type="FLOAT"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+        <DataField Id="Due" Name="Due" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="DATETIME"/>
+          </DataType>
+          <InitialValue>1138192622000</InitialValue>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="IsWorkItemUDA">
+              <IsWorkItemUDA Value="FALSE"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="isReadOnly">
+              <isReadOnly Value="FALSE"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="IflowDataType">
+              <IflowDataType Type="DATE"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+        </DataField>
+      </DataFields>
+      <Activities>
+        <Activity Id="154808" Name="Example5">
+          <Implementation>
+            <SubFlow Id="33" Execution="SYNCHR">
+              <ActualParameters>
+                <ActualParameter>Name</ActualParameter>
+                <ActualParameter>Loan Amount</ActualParameter>
+                <ActualParameter>Address</ActualParameter>
+              </ActualParameters>
+            </SubFlow>
+          </Implementation>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="154812"/>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="NodeType" Value="7"/>
+            <ExtendedAttribute Name="InTransaction" Value="false"/>
+            <ExtendedAttribute Name="DataMappings">
+              <DataMappings/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ChildPlanId" Value="33"/>
+            <ExtendedAttribute Name="ChildPlan" Value="Example5"/>
+            <ExtendedAttribute Name="subProcessDefinitionURI" Value=""/>
+            <ExtendedAttribute Name="Coordinates">
+              <Coordinates xpos="220" ypos="58"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="DataMappings">
+              <DataMappings>
+                <DataMapping ProcessDataField="Name" SubProcessDataField="Item Name" Direction="IN"/>
+                <DataMapping ProcessDataField="Loan Amount" SubProcessDataField="Cost" Direction="INOUT"/>
+                <DataMapping ProcessDataField="Address" SubProcessDataField="Requester" Direction="IN"/>
+              </DataMappings>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="PrivateData">
+              <PrivateData>
+                <DataMapping>
+                  <DataMappingElement sourceDataSetElementName="Name" targetDataSetElementName="Item Name" fromSource="true" fromTarget="false"/>
+                  <DataMappingElement sourceDataSetElementName="Loan Amount" targetDataSetElementName="Cost" fromSource="true" fromTarget="true"/>
+                  <DataMappingElement sourceDataSetElementName="Address" targetDataSetElementName="Requester" fromSource="true" fromTarget="false"/>
+                </DataMapping>
+              </PrivateData>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="220.0" YCoordinate="58.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="154809" Name="Exit1">
+          <Route/>
+          <Performer>role</Performer>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="NodeType" Value="1"/>
+            <ExtendedAttribute Name="InTransaction" Value="false"/>
+            <ExtendedAttribute Name="Coordinates">
+              <Coordinates xpos="512" ypos="170"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="512.0" YCoordinate="170.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="154810" Name="Start">
+          <Route/>
+          <Performer/>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="154811"/>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="NodeType" Value="0"/>
+            <ExtendedAttribute Name="CustomNodeType" Value=""/>
+            <ExtendedAttribute Name="InTransaction" Value="false"/>
+            <ExtendedAttribute Name="Coordinates">
+              <Coordinates xpos="164" ypos="170"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="164.0" YCoordinate="170.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+      </Activities>
+      <Transitions>
+        <Transition Id="154811" Name="Arrow1" From="154810" To="154808">
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="StartPoint">
+              <StartPoint xpos="106" ypos="83"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="EndPoint">
+              <EndPoint xpos="204" ypos="83"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="106.0" YCoordinate="83.0"/>
+              <Coordinates XCoordinate="204.0" YCoordinate="83.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+        <Transition Id="154812" Name="Arrow2" From="154808" To="154809">
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="StartPoint">
+              <StartPoint xpos="284" ypos="83"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="EndPoint">
+              <EndPoint xpos="388" ypos="83"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="284.0" YCoordinate="83.0"/>
+              <Coordinates XCoordinate="388.0" YCoordinate="83.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+      </Transitions>
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="ProcessDefinitionId" Value="27"/>
+        <ExtendedAttribute Name="ProcessTypeId" Value="0"/>
+        <ExtendedAttribute Name="ParentVersion" Value=""/>
+        <ExtendedAttribute Name="VersionComment" Value=""/>
+        <ExtendedAttribute Name="Organization" Value=""/>
+        <ExtendedAttribute Name="State" Value="0"/>
+        <ExtendedAttribute Name="Title" Value=""/>
+        <ExtendedAttribute Name="TemplateIdentifier" Value=""/>
+        <ExtendedAttribute Name="ProcessOwnerRole" Value=""/>
+        <ExtendedAttribute Name="ProcessDefinitionId" Value="7"/>
+        <ExtendedAttribute Name="ProcessTypeId" Value="0"/>
+        <ExtendedAttribute Name="ParentVersion" Value=""/>
+        <ExtendedAttribute Name="SWIM_LANES">
+          <SWIM_LANES/>
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="ANNOTATIONS">
+          <ANNOTATIONS/>
+        </ExtendedAttribute>
+      </ExtendedAttributes>
+    </WorkflowProcess>
+  </WorkflowProcesses>
+  <ExtendedAttributes>
+    <ExtendedAttribute Name="Build" Value="7.2 IF720055"/>
+    <ExtendedAttribute Name="System" Value="kswenson4Flow"/>
+  </ExtendedAttributes>
+</Package>

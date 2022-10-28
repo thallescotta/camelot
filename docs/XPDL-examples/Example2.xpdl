@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns:iflow="http://www.i-flow.com" xmlns:deprecated="http://www.wfmc.org/2002/XPDL1.0" xmlns="http://www.wfmc.org/2004/XPDL2.0alpha" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2004/XPDL2.0alpha http://www.wfmc.org/standards/docs/TC-1025_bpmnxpdl_24.xsd" Id="21" Name="Example2_2.0">
+  <PackageHeader>
+    <XPDLVersion>2.0</XPDLVersion>
+    <Vendor>Fujitsu Software Corporation</Vendor>
+    <Created>Wed Jan 25 04:08:05 PST 2006</Created>
+  </PackageHeader>
+  <RedefinableHeader PublicationStatus="UNDER_TEST"/>
+  <Script Type="text/javascript"/>
+  <Participants>
+    <Participant Id="bpm" Name="bpm">
+      <ParticipantType Type="RESOURCE"/>
+    </Participant>
+    <Participant Id="Manager" Name="Manager">
+      <ParticipantType Type="ROLE"/>
+    </Participant>
+    <Participant Id="Director" Name="Director">
+      <ParticipantType Type="ROLE"/>
+    </Participant>
+    <Participant Id="role" Name="role">
+      <ParticipantType Type="ROLE"/>
+    </Participant>
+  </Participants>
+  <Pools>
+    <Pool Process="Example2_2.0" Id="1" Name="" BoundaryVisible="false" Orientation="HORIZONTAL">
+      <Lanes>
+        <Lane Id="1" Name="">
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo>
+              <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Lane>
+      </Lanes>
+      <NodeGraphicsInfos>
+        <NodeGraphicsInfo>
+          <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+        </NodeGraphicsInfo>
+      </NodeGraphicsInfos>
+    </Pool>
+  </Pools>
+  <WorkflowProcesses>
+    <WorkflowProcess Id="21" Name="Example2_2.0" AccessLevel="PUBLIC">
+      <ProcessHeader>
+        <Description>an example with a conditional branch</Description>
+      </ProcessHeader>
+      <RedefinableHeader PublicationStatus="UNDER_TEST">
+        <Author>bpm</Author>
+        <Version>1.0</Version>
+        <Responsibles>
+          <Responsible>bpm</Responsible>
+        </Responsibles>
+      </RedefinableHeader>
+      <DataFields>
+        <DataField Id="Requester" Name="Requester" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="STRING"/>
+          </DataType>
+          <InitialValue/>
+        </DataField>
+        <DataField Id="ItemName" Name="Item Name" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="STRING"/>
+          </DataType>
+          <InitialValue/>
+        </DataField>
+        <DataField Id="Cost" Name="Cost" IsArray="FALSE">
+          <DataType>
+            <BasicType Type="FLOAT"/>
+          </DataType>
+          <InitialValue>0.0</InitialValue>
+        </DataField>
+      </DataFields>
+      <Activities>
+        <Activity Id="153509" Name="Start">
+          <Route/>
+          <Performer/>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="153520"/>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="81.0" YCoordinate="80.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="153510" Name="Condition1">
+          <Route/>
+          <Performer/>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="153515"/>
+                  <TransitionRef Id="153519"/>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="231.0" YCoordinate="65.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="153511" Name="Approve">
+          <Implementation>
+            <No/>
+          </Implementation>
+          <Performer>Director</Performer>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="153516"/>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" 
+                ToolId="Interstage Business Process Manager" 
+                IsVisible="true" Page="1">
+              <Coordinates XCoordinate="143.0" YCoordinate="225.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="153512" Name="Approve">
+          <Implementation>
+            <No/>
+          </Implementation>
+          <Performer>Manager</Performer>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="153517"/>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" 
+                ToolId="Interstage Business Process Manager" 
+                IsVisible="true" Page="1">
+              <Coordinates XCoordinate="341.0" YCoordinate="225.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="153513" Name="Or1">
+          <Route/>
+          <Performer>role</Performer>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="153518"/>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" 
+                ToolId="Interstage Business Process Manager" 
+                IsVisible="true" Page="1">
+              <Coordinates XCoordinate="224.0" YCoordinate="348.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="153514" Name="Exit1">
+          <Route/>
+          <Performer/>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" 
+                ToolId="Interstage Business Process Manager" 
+                IsVisible="true" Page="1">
+              <Coordinates XCoordinate="457.0" YCoordinate="362.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+      </Activities>
+      <Transitions>
+        <Transition Id="153515" Name="cost &lt;= 5000" From="153510" To="153512">
+          <Condition Type="CONDITION"> == 0</Condition>
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" 
+                ToolId="Interstage Business Process Manager" 
+                IsVisible="true" Page="1">
+              <Coordinates XCoordinate="240.0" YCoordinate="101.0"/>
+              <Coordinates XCoordinate="240.0" YCoordinate="147.0"/>
+              <Coordinates XCoordinate="339.0" YCoordinate="147.0"/>
+              <Coordinates XCoordinate="339.0" YCoordinate="191.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+        <Transition Id="153516" Name="Approved" From="153511" To="153513">
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" 
+                ToolId="Interstage Business Process Manager" 
+                IsVisible="true" Page="1">
+              <Coordinates XCoordinate="141.0" YCoordinate="259.0"/>
+              <Coordinates XCoordinate="141.0" YCoordinate="302.0"/>
+              <Coordinates XCoordinate="240.0" YCoordinate="302.0"/>
+              <Coordinates XCoordinate="240.0" YCoordinate="347.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+        <Transition Id="153517" Name="Approved" From="153512" To="153513">
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" 
+                ToolId="Interstage Business Process Manager" 
+                IsVisible="true" Page="1">
+              <Coordinates XCoordinate="339.0" YCoordinate="259.0"/>
+              <Coordinates XCoordinate="339.0" YCoordinate="304.0"/>
+              <Coordinates XCoordinate="240.0" YCoordinate="304.0"/>
+              <Coordinates XCoordinate="240.0" YCoordinate="347.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+        <Transition Id="153518" Name="2" From="153513" To="153514">
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" 
+                ToolId="Interstage Business Process Manager" 
+                IsVisible="true" Page="1">
+              <Coordinates XCoordinate="258.0" YCoordinate="365.0"/>
+              <Coordinates XCoordinate="426.0" YCoordinate="365.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+        <Transition Id="153519" Name="cost &gt; 5000" From="153510" To="153511">
+          <Condition Type="CONDITION"> == 0</Condition>
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="240.0" YCoordinate="101.0"/>
+              <Coordinates XCoordinate="240.0" YCoordinate="147.0"/>
+              <Coordinates XCoordinate="141.0" YCoordinate="147.0"/>
+              <Coordinates XCoordinate="141.0" YCoordinate="191.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+        <Transition Id="153520" Name="1" From="153509" To="153510">
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="116.0" YCoordinate="83.0"/>
+              <Coordinates XCoordinate="222.0" YCoordinate="83.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+      </Transitions>
+    </WorkflowProcess>
+  </WorkflowProcesses>
+</Package>

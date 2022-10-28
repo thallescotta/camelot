@@ -1,0 +1,283 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Package xmlns:iflow="http://www.i-flow.com" xmlns:deprecated="http://www.wfmc.org/2002/XPDL1.0" xmlns="http://www.wfmc.org/2004/XPDL2.0alpha" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2004/XPDL2.0alpha http://www.wfmc.org/standards/docs/TC-1025_bpmnxpdl_24.xsd" Id="86" Name="Example4_2.0_Extended">
+  <PackageHeader>
+    <XPDLVersion>2.0</XPDLVersion>
+    <Vendor>Fujitsu Software Corporation</Vendor>
+    <Created>Wed Jan 25 04:32:12 PST 2006</Created>
+  </PackageHeader>
+  <RedefinableHeader PublicationStatus="UNDER_TEST"/>
+  <Script Type="text/javascript"/>
+  <Participants>
+    <Participant Id="bpm" Name="bpm">
+      <ParticipantType Type="RESOURCE"/>
+    </Participant>
+    <Participant Id="Role" Name="Role">
+      <ParticipantType Type="ROLE"/>
+    </Participant>
+  </Participants>
+  <Pools>
+    <Pool Process="Example4_2.0_Extended" Id="1" Name="" BoundaryVisible="false" Orientation="HORIZONTAL">
+      <Lanes>
+        <Lane Id="1" Name="">
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo>
+              <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Lane>
+      </Lanes>
+      <NodeGraphicsInfos>
+        <NodeGraphicsInfo>
+          <Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+        </NodeGraphicsInfo>
+      </NodeGraphicsInfos>
+    </Pool>
+  </Pools>
+  <WorkflowProcesses>
+    <WorkflowProcess Id="86" Name="Example4_2.0_Extended" AccessLevel="PUBLIC">
+      <ProcessHeader>
+        <Description>An example of an activity with decisions</Description>
+      </ProcessHeader>
+      <RedefinableHeader PublicationStatus="UNDER_TEST">
+        <Author>bpm</Author>
+        <Version>1.0</Version>
+        <Responsibles>
+          <Responsible>bpm</Responsible>
+        </Responsibles>
+      </RedefinableHeader>
+      <DataFields/>
+      <Activities>
+        <Activity Id="154397" Name="Start">
+          <Route/>
+          <Performer/>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="154413"/>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="NodeType" Value="0"/>
+            <ExtendedAttribute Name="InTransaction" Value="false"/>
+            <ExtendedAttribute Name="Coordinates">
+              <Coordinates xpos="81" ypos="80"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="81.0" YCoordinate="80.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="154398" Name="Make Choice">
+          <Implementation>
+            <No/>
+          </Implementation>
+          <Performer>Role</Performer>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+              <Split Type="XOR">
+                <TransitionRefs>
+                  <TransitionRef Id="154414"/>
+                  <TransitionRef Id="154415"/>
+                  <TransitionRef Id="154416"/>
+                </TransitionRefs>
+              </Split>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="NodeType" Value="2"/>
+            <ExtendedAttribute Name="InTransaction" Value="false"/>
+            <ExtendedAttribute Name="Coordinates">
+              <Coordinates xpos="293" ypos="83"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="293.0" YCoordinate="83.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="154410" Name="Exit1">
+          <Route/>
+          <Performer/>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="NodeType" Value="1"/>
+            <ExtendedAttribute Name="InTransaction" Value="false"/>
+            <ExtendedAttribute Name="Coordinates">
+              <Coordinates xpos="167" ypos="258"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="167.0" YCoordinate="258.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="154411" Name="Exit2">
+          <Route/>
+          <Performer/>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="NodeType" Value="1"/>
+            <ExtendedAttribute Name="InTransaction" Value="false"/>
+            <ExtendedAttribute Name="Coordinates">
+              <Coordinates xpos="289" ypos="258"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="289.0" YCoordinate="258.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+        <Activity Id="154412" Name="Exit3">
+          <Route/>
+          <Performer/>
+          <Priority/>
+          <Documentation/>
+          <TransitionRestrictions>
+            <TransitionRestriction>
+              <Join Type="XOR"/>
+            </TransitionRestriction>
+          </TransitionRestrictions>
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="NodeType" Value="1"/>
+            <ExtendedAttribute Name="InTransaction" Value="false"/>
+            <ExtendedAttribute Name="Coordinates">
+              <Coordinates xpos="408" ypos="258"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <NodeGraphicsInfos>
+            <NodeGraphicsInfo FillColor="light blue" LaneId="1" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="408.0" YCoordinate="258.0"/>
+            </NodeGraphicsInfo>
+          </NodeGraphicsInfos>
+        </Activity>
+      </Activities>
+      <Transitions>
+        <Transition Id="154413" Name="Arrow1" From="154397" To="154398">
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="StartPoint">
+              <StartPoint xpos="116" ypos="83"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="EndPoint">
+              <EndPoint xpos="240" ypos="83"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="116.0" YCoordinate="83.0"/>
+              <Coordinates XCoordinate="240.0" YCoordinate="83.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+        <Transition Id="154414" Name="Choice2" From="154398" To="154411">
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="StartPoint">
+              <StartPoint xpos="291" ypos="117"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="EndPoint">
+              <EndPoint xpos="291" ypos="228"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="291.0" YCoordinate="117.0"/>
+              <Coordinates XCoordinate="291.0" YCoordinate="228.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+        <Transition Id="154415" Name="Choice1" From="154398" To="154410">
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="StartPoint">
+              <StartPoint xpos="257" ypos="117"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="EndPoint">
+              <EndPoint xpos="169" ypos="228"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ViewerScript">
+              <ViewerScript Value="257,174,169,174"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="257.0" YCoordinate="117.0"/>
+              <Coordinates XCoordinate="257.0" YCoordinate="174.0"/>
+              <Coordinates XCoordinate="169.0" YCoordinate="174.0"/>
+              <Coordinates XCoordinate="169.0" YCoordinate="228.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+        <Transition Id="154416" Name="Choice3" From="154398" To="154412">
+          <ExtendedAttributes>
+            <ExtendedAttribute Name="StartPoint">
+              <StartPoint xpos="325" ypos="117"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="EndPoint">
+              <EndPoint xpos="410" ypos="228"/>
+            </ExtendedAttribute>
+            <ExtendedAttribute Name="ViewerScript">
+              <ViewerScript Value="325,170,410,170"/>
+            </ExtendedAttribute>
+          </ExtendedAttributes>
+          <ConnectorGraphicsInfos>
+            <ConnectorGraphicsInfo FillColor="light blue" ToolId="Interstage Business Process Manager" IsVisible="true" Page="1">
+              <Coordinates XCoordinate="325.0" YCoordinate="117.0"/>
+              <Coordinates XCoordinate="325.0" YCoordinate="170.0"/>
+              <Coordinates XCoordinate="410.0" YCoordinate="170.0"/>
+              <Coordinates XCoordinate="410.0" YCoordinate="228.0"/>
+            </ConnectorGraphicsInfo>
+          </ConnectorGraphicsInfos>
+        </Transition>
+      </Transitions>
+      <ExtendedAttributes>
+        <ExtendedAttribute Name="ProcessDefinitionId" Value="86"/>
+        <ExtendedAttribute Name="ProcessTypeId" Value="0"/>
+        <ExtendedAttribute Name="ParentVersion" Value=""/>
+        <ExtendedAttribute Name="VersionComment" Value=""/>
+        <ExtendedAttribute Name="Organization" Value=""/>
+        <ExtendedAttribute Name="State" Value="0"/>
+        <ExtendedAttribute Name="Title" Value=""/>
+        <ExtendedAttribute Name="TemplateIdentifier" Value=""/>
+        <ExtendedAttribute Name="ProcessOwnerRole" Value=""/>
+        <ExtendedAttribute Name="ProcessDefinitionId" Value="48"/>
+        <ExtendedAttribute Name="ProcessTypeId" Value="0"/>
+        <ExtendedAttribute Name="ParentVersion" Value=""/>
+        <ExtendedAttribute Name="SWIM_LANES">
+          <SWIM_LANES/>
+        </ExtendedAttribute>
+        <ExtendedAttribute Name="ANNOTATIONS">
+          <ANNOTATIONS/>
+        </ExtendedAttribute>
+      </ExtendedAttributes>
+    </WorkflowProcess>
+  </WorkflowProcesses>
+  <ExtendedAttributes>
+    <ExtendedAttribute Name="Build" Value="7.2 IF720055"/>
+    <ExtendedAttribute Name="System" Value="kswenson4Flow"/>
+  </ExtendedAttributes>
+</Package>

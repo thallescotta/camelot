@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package Id="1370401457983" Name="Drawing1" xmlns="http://www.wfmc.org/2009/XPDL2.2">
+    <PackageHeader>
+        <XPDLVersion>
+			2.2
+		</XPDLVersion>
+        <Vendor>Trisotech (BPMN 2.0 - 4.0)</Vendor>
+        <Created>2013-06-04T23:04:17.998-04:00</Created>
+        <LayoutInfo PixelsPerMillimeter="3.7795277"/>
+    </PackageHeader>
+    <RedefinableHeader>
+        <Author>Xia Li</Author>
+    </RedefinableHeader>
+    <Pages>
+        <Page Height="816.0" Id="6" Name="Untitled Diagram" Width="1056.0"/>
+    </Pages>
+    <DataStores>
+        <DataStore Capacity="0" Id="DS1370401458030" IsUnlimited="false"/>
+    </DataStores>
+    <Pools/>
+    <Associations>
+        <Association AssociationDirection="None" Id="_8f06a2b2-fd71-4078-81e0-4bbb87be90cc" Name="" Source="_59be6a7e-d1ae-450b-9314-b76a7a5ff2df" Target="_25f64917-beb9-431e-9ac6-c1784604608c">
+            <Object Id="1370401458053"/>
+            <ConnectorGraphicsInfos>
+                <ConnectorGraphicsInfo BorderColor="0;0;0" PageId="6" ToolId="Trisotech_Visio">
+                    <Coordinates XCoordinate="264.0" YCoordinate="542.0"/>
+                    <Coordinates XCoordinate="282.0" YCoordinate="542.0"/>
+                    <Coordinates XCoordinate="342.0" YCoordinate="542.0"/>
+                </ConnectorGraphicsInfo>
+            </ConnectorGraphicsInfos>
+        </Association>
+    </Associations>
+    <WorkflowProcesses>
+        <WorkflowProcess Id="WFP-6-">
+            <ProcessHeader/>
+            <FormalParameters>
+                <FormalParameter Id="1370401458066" IsArray="true">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="1370401458067" IsArray="true">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+            </FormalParameters>
+            <DataFields>
+                <DataField Id="DF1370401458068" IsArray="true">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="DF1370401458069" IsArray="false">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Activities>
+
+
+				<Activity CompletionQuantity="1" Id="_2760ddfa-59df-4233-93ea-380c2892f99f" IsForCompensation="false" Name="" StartQuantity="1">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="68.0" PageId="6" Shape="Task" ToolId="Trisotech_Visio" Width="83.0">
+                            <Coordinates XCoordinate="342.0" YCoordinate="112.0"/>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </Activity>
+
+						<Activity CompletionQuantity="1" Id="_2760ddfa-59df-4233-93ea-380c2892f99f" IsForCompensation="false" Name="" StartQuantity="1">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="68.0" PageId="6" Shape="Task" ToolId="Trisotech_Visio" Width="83.0">
+                            <Coordinates XCoordinate="342.0" YCoordinate="112.0"/>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </Activity>
+				
+                <Activity CompletionQuantity="1" Id="_2760ddfa-59df-4233-93ea-380c2892f99f" IsForCompensation="false" Name="" StartQuantity="1">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="68.0" PageId="6" Shape="Task" ToolId="Trisotech_Visio" Width="83.0">
+                            <Coordinates XCoordinate="342.0" YCoordinate="112.0"/>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </Activity>
+                <Activity CompletionQuantity="1" Id="_fdcc4a8c-0431-4bf9-813b-1906dfef0762" IsForCompensation="false" Name="" StartQuantity="1">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="68.0" PageId="6" Shape="Task" ToolId="Trisotech_Visio" Width="83.0">
+                            <Coordinates XCoordinate="342.0" YCoordinate="330.0"/>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </Activity>
+                <Activity CompletionQuantity="1" Id="_25f64917-beb9-431e-9ac6-c1784604608c" IsForCompensation="false" Name="" StartQuantity="1">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="68.0" PageId="6" Shape="Task" ToolId="Trisotech_Visio" Width="83.0">
+                            <Coordinates XCoordinate="342.0" YCoordinate="508.0"/>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </Activity>
+                <Activity CompletionQuantity="1" Id="_b7fafc0e-26e0-4de9-8fd6-7ed48b3dfc58" IsForCompensation="false" Name="" StartQuantity="1">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="68.0" PageId="6" Shape="Task" ToolId="Trisotech_Visio" Width="83.0">
+                            <Coordinates XCoordinate="721.0" YCoordinate="508.0"/>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </Activity>
+            </Activities>
+            <DataObjects>
+                <DataObject Id="_59be6a7e-d1ae-450b-9314-b76a7a5ff2df" Name="Associated Data collection ">
+                    <DataFieldRef Id="DF1370401458068"/>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="38.0" PageId="6" Shape="Data Object" ToolId="Trisotech_Visio" Width="30.0">
+                            <Coordinates XCoordinate="234.0" YCoordinate="523.0"/>
+                            <Label Height="30.938035677083334" Width="105.60000000000001">
+                                <Coordinates XCoordinate="196.31811023622046" YCoordinate="554.9798010590961"/>
+                                <Font Bold="false" Italic="false" Name="Arial" Size="8.0" StrikeThrough="false" Underline="false"/>
+                            </Label>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </DataObject>
+                <DataObject Id="_9181ac4f-6d9f-4b08-b7d7-0445c446ea8f" Name="DataObject ">
+                    <DataFieldRef Id="DF1370401458069"/>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="38.0" PageId="6" Shape="Data Object" ToolId="Trisotech_Visio" Width="30.0">
+                            <Coordinates XCoordinate="600.0" YCoordinate="523.0"/>
+                            <Label Height="18.138084505208333" Width="105.60000000000001">
+                                <Coordinates XCoordinate="562.3181102362205" YCoordinate="561.3797766450336"/>
+                                <Font Bold="false" Italic="false" Name="Arial" Size="8.0" StrikeThrough="false" Underline="false"/>
+                            </Label>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </DataObject>
+            </DataObjects>
+            <DataInputOutputs>
+                <DataInput Id="_5ff767dc-5be0-4259-80c6-8fe43d404d75" Name="Input Data ">
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="38.0" PageId="6" Shape="Data Object" ToolId="Trisotech_Visio" Width="30.0">
+                            <Coordinates XCoordinate="156.0" YCoordinate="127.0"/>
+                            <Label Height="18.138084505208333" Width="105.60000000000001">
+                                <Coordinates XCoordinate="118.31811023622046" YCoordinate="165.37977664503364"/>
+                                <Font Bold="false" Italic="false" Name="Arial" Size="8.0" StrikeThrough="false" Underline="false"/>
+                            </Label>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </DataInput>
+                <DataInput Id="_924a727c-9bfb-439a-95d0-84e66d9b0820" Name="InputDataCollection ">
+                    <FormalParameterRef Id="1370401458066"/>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="38.0" PageId="6" Shape="Data Object" ToolId="Trisotech_Visio" Width="30.0">
+                            <Coordinates XCoordinate="156.0" YCoordinate="345.0"/>
+                            <Label Height="18.138084505208333" Width="105.60000000000001">
+                                <Coordinates XCoordinate="118.31811023622046" YCoordinate="383.37977664503364"/>
+                                <Font Bold="false" Italic="false" Name="Arial" Size="8.0" StrikeThrough="false" Underline="false"/>
+                            </Label>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </DataInput>
+                <DataOutput Id="_b530ad00-047c-49e6-ac46-ce7bd70a6a60" Name="OutputData ">
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="38.0" PageId="6" Shape="Data Object" ToolId="Trisotech_Visio" Width="30.0">
+                            <Coordinates XCoordinate="564.0" YCoordinate="127.0"/>
+                            <Label Height="18.138084505208333" Width="105.60000000000001">
+                                <Coordinates XCoordinate="526.3181102362205" YCoordinate="165.37977664503364"/>
+                                <Font Bold="false" Italic="false" Name="Arial" Size="8.0" StrikeThrough="false" Underline="false"/>
+                            </Label>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </DataOutput>
+                <DataOutput Id="_df51c7f9-997a-4c3b-b9f3-9ea291aeb08d" Name="OutputDataCollection ">
+                    <FormalParameterRef Id="1370401458067"/>
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="38.0" PageId="6" Shape="Data Object" ToolId="Trisotech_Visio" Width="30.0">
+                            <Coordinates XCoordinate="564.0" YCoordinate="345.0"/>
+                            <Label Height="30.938035677083334" Width="105.60000000000001">
+                                <Coordinates XCoordinate="526.3181102362205" YCoordinate="376.97980105909613"/>
+                                <Font Bold="false" Italic="false" Name="Arial" Size="8.0" StrikeThrough="false" Underline="false"/>
+                            </Label>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </DataOutput>
+            </DataInputOutputs>
+            <DataStoreReferences>
+                <DataStoreReference DataStoreRef="DS1370401458030" Id="_ae3a21bc-6ea0-4259-890f-61f5ef2eb6b9" Name="input DB ">
+                    <NodeGraphicsInfos>
+                        <NodeGraphicsInfo Height="27.0" PageId="6" Shape="Data Store" ToolId="Trisotech_Visio" Width="32.0">
+                            <Coordinates XCoordinate="368.0" YCoordinate="624.0"/>
+                            <Label Height="23.471417838541672" Width="105.60000000000001">
+                                <Coordinates XCoordinate="331.325" YCoordinate="649.8264291080728"/>
+                                <Font Bold="false" Italic="false" Name="Arial" Size="8.0" StrikeThrough="false" Underline="false"/>
+                            </Label>
+                        </NodeGraphicsInfo>
+                    </NodeGraphicsInfos>
+                </DataStoreReference>
+            </DataStoreReferences>
+            <DataAssociations>
+                <DataAssociation From="_5ff767dc-5be0-4259-80c6-8fe43d404d75" Id="_bed40428-a4cc-4f91-af59-7ad6b08ecb22" Name="" To="_2760ddfa-59df-4233-93ea-380c2892f99f">
+                    <Object Id="1370401458045"/>
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo BorderColor="0;0;0" PageId="6" ToolId="Trisotech_Visio">
+                            <Coordinates XCoordinate="186.0" YCoordinate="146.0"/>
+                            <Coordinates XCoordinate="204.0" YCoordinate="146.0"/>
+                            <Coordinates XCoordinate="342.0" YCoordinate="146.0"/>
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+                </DataAssociation>
+                <DataAssociation From="_2760ddfa-59df-4233-93ea-380c2892f99f" Id="_66ae829d-d5cf-40db-bfd0-c8413316b13f" Name="" To="_b530ad00-047c-49e6-ac46-ce7bd70a6a60">
+                    <Object Id="1370401458047"/>
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo BorderColor="0;0;0" PageId="6" ToolId="Trisotech_Visio">
+                            <Coordinates XCoordinate="426.0" YCoordinate="146.0"/>
+                            <Coordinates XCoordinate="444.0" YCoordinate="146.0"/>
+                            <Coordinates XCoordinate="564.0" YCoordinate="146.0"/>
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+                </DataAssociation>
+                <DataAssociation From="_924a727c-9bfb-439a-95d0-84e66d9b0820" Id="_b2651d1e-dded-40dc-879c-312d2ffc4185" Name="" To="_fdcc4a8c-0431-4bf9-813b-1906dfef0762">
+                    <Object Id="1370401458049"/>
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo BorderColor="0;0;0" PageId="6" ToolId="Trisotech_Visio">
+                            <Coordinates XCoordinate="186.0" YCoordinate="364.0"/>
+                            <Coordinates XCoordinate="204.0" YCoordinate="364.0"/>
+                            <Coordinates XCoordinate="342.0" YCoordinate="364.0"/>
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+                </DataAssociation>
+                <DataAssociation From="_fdcc4a8c-0431-4bf9-813b-1906dfef0762" Id="_8a2da9b1-bf8d-42a5-8b6b-b2872264b078" Name="" To="_df51c7f9-997a-4c3b-b9f3-9ea291aeb08d">
+                    <Object Id="1370401458051"/>
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo BorderColor="0;0;0" PageId="6" ToolId="Trisotech_Visio">
+                            <Coordinates XCoordinate="426.0" YCoordinate="364.0"/>
+                            <Coordinates XCoordinate="444.0" YCoordinate="364.0"/>
+                            <Coordinates XCoordinate="564.0" YCoordinate="364.0"/>
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+                </DataAssociation>
+                <DataAssociation From="_9181ac4f-6d9f-4b08-b7d7-0445c446ea8f" Id="_04ea9a01-936f-4442-98e0-8529a1861010" Name="" To="_b7fafc0e-26e0-4de9-8fd6-7ed48b3dfc58">
+                    <Object Id="1370401458062"/>
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo BorderColor="0;0;0" PageId="6" ToolId="Trisotech_Visio">
+                            <Coordinates XCoordinate="630.0" YCoordinate="542.0"/>
+                            <Coordinates XCoordinate="648.0" YCoordinate="542.0"/>
+                            <Coordinates XCoordinate="721.0" YCoordinate="542.0"/>
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+                </DataAssociation>
+                <DataAssociation From="_ae3a21bc-6ea0-4259-890f-61f5ef2eb6b9" Id="_521413b4-add9-4e49-be10-e9f2835cf24d" Name="" To="_25f64917-beb9-431e-9ac6-c1784604608c">
+                    <Object Id="1370401458064"/>
+                    <ConnectorGraphicsInfos>
+                        <ConnectorGraphicsInfo BorderColor="0;0;0" PageId="6" ToolId="Trisotech_Visio">
+                            <Coordinates XCoordinate="384.0" YCoordinate="624.0"/>
+                            <Coordinates XCoordinate="384.0" YCoordinate="606.0"/>
+                            <Coordinates XCoordinate="384.0" YCoordinate="576.0"/>
+                        </ConnectorGraphicsInfo>
+                    </ConnectorGraphicsInfos>
+                </DataAssociation>
+            </DataAssociations>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>

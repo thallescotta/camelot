@@ -1,0 +1,387 @@
+<div id="main-content" class="container">
+
+    <div id="app-description">  
+        <div class="row">
+          <div class="col-md-6">
+            <img class="index-icon" src="./img/index.png" />
+          </div>
+          <div class="col-md-6 center send-button">
+              <h4>Vamos traduzir os seus modelos de processo de negócio para a linguagem cidadã:</h4>
+              <label for="uploadFile" style="cursor: pointer;">
+                  <img class="send-icon" src="./img/send-button.png" /> 
+                  <input id="uploadFile" type="file" style="display: none;" on-read-file="showContent($content)">     
+              </label>              
+              <h4>* Somente arquivos XPDL (Arquivo padrão de transferência de informações de processos em BPMN)</h4>
+          </div>
+        </div>
+        
+        <div class="row">
+            <img class="col-md-12 how-to-use-icon" src="./img/how-to-use.png" /> 
+        </div>
+
+        <div class="row center">
+            <div class="col-md-3">
+              <img class="step-icon step-icon-XL" src="./img/step-one.png" /> 
+              <p>Exporte o seu modelo de Processos em BPMN para XPDL.<br/>Somente com esse padrão de arquivo todo o seu processo será conhecido pela ferramenta.</p>
+            </div>
+            <div class="col-md-3">
+              <img class="step-icon step-icon-M" src="./img/step-two.png" /> 
+              <p>Selecione um arquivo XPDL no seu dispositivo e o sistema realizará o primeiro passa da adaptação internamente.</p>
+            </div>
+            <div class="col-md-3">
+              <img class="step-icon step-icon-M" src="./img/step-three.png" /> 
+              <p>Na tela de configuração você adaptará o processo de negócio cmo preferir para esta linguagem cidadã.</p>
+            </div>
+            <div class="col-md-3">
+              <img class="step-icon step-icon-L" src="./img/step-four.png" /> 
+              <p>O sistema mostrará o modelo final em linguagem cidadã na tela de exposição e você poderá salvar como imagem ou reiniciar a adaptação.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <img class="col-md-12 warning-icon" src="./img/warning.png" /> 
+        </div>
+
+        <div class="row center">
+            <div class="col-md-5">              
+              <p class="warning-text green">A CAMELoT ainda não atende a transformação de modelos mais elaborados, com vários e longos fluxos, eventos complexos ou determinados elementos sintáticos não usuais.</p>
+            </div>
+            <div class="col-md-7">
+              <img class="step-icon step-icon-XL" src="./img/diagram.png" />             
+            </div>
+        </div>
+
+
+    </div>      
+
+    <div class="container" id="main-app" ng-if="readableProcess">
+
+        <div class="row">   
+          <div class="col-md-8">
+            <h1><b>Conteúdo do processo</b></h1>
+            <p>Todos os atores, tarefas e informações do seu modelo estão descritas no quadro abaixo, para modificá-las de acordo com a sua necessidade de entendimento para a Linguagem Cidadã:</p>
+          </div>
+          <img class="col-md-4" src="./img/diagram.png" />    
+        </div>
+
+        <div class="row">
+          <div class="col-md-6" id="action-box">
+
+              <div class="well actor-box well-lg taskColumn" id="inner-action-box">
+
+                  <!-- INÍCIO ATOR -->
+
+                  <div ng-repeat="actor in readableProcess.getActors()" class="actor">
+
+                    <div class="row">
+
+                        <div class="col-md-3">
+                          <img class="tool-icon" src="./img/actor.png" alt="Ator" />
+                        </div>
+
+                        <div class="col-md-9">
+                          <div style="margin-bottom: 3%">
+                            <h4 class="inline"><b>ATOR: </b><span ng-if="actor != '' ">{{ actor }}</span></h4>  
+                          </div> 
+
+                          <div class="row">
+                            <div style="padding-right: 0" class="taskToggler clickable col-md-6" status="exposed">
+                              <i class="material-icons" id="visibility-icon">visibility_off</i><p class="inline">Esconder tarefas</p>
+                            </div>
+                            <div class="col-md-6">
+                              <div colorpicker class="colorpicker clickable center inline" style="width: 12%; height: 3.5%; display: inline-block; margin-right: 1%; background-color: {{ color }}; border: 1px solid grey;" ng-model="color" ng-change="setActor(actor, color)"/>
+                              <p class="inline"> Escolher cor</p>
+                            </div>
+                          </div>
+
+                          <div class="row">    
+                            <div class="col-md-6 clickable" ng-click="removeActor(readableProcess, actor)">
+                                <i id="deleteActor" class="material-icons">delete</i><p class="inline"> Excluir ator</p>
+                            </div>                        
+                            <div ng-click="openActorName(readableProcess, actor)" class="clickable col-md-6 modal-demo">
+                                <i class="material-icons">edit</i><p class="inline">Editar nome</p>
+                                <script type="text/ng-template" id="myModalActorName.html">
+                                    <div class="modal-window">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="modal-actor-name">Alterar nome do ator {{ actor }}</h3>
+                                        </div>
+                                        <div class="modal-body" id="modal-body-actor-name">
+                                            <input type="text" ng-value="actor" ng-model="newActorName">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary blue-button" type="button" ng-click="$ctrl.ok('actorName')">OK</button>
+                                            <button class="btn btn-primary blue-button" type="button" ng-click="$ctrl.cancel()">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </script>
+                            </div>                            
+                          </div>       
+                        </div>
+                    </div>
+
+                  <!-- FIM ATOR -->
+
+                      <div ng-repeat="readableTask in readableProcess.getTasksByActor(actor)" class="tasks">
+
+                          <div style="margin: 0% 0% 3% 0%; height: 0.5%; width: 100%; background-color: #385b94"/>
+
+                          <div class="row">
+
+                            <div class="col-md-3">
+                              <img class="tool-icon" src="./img/task.png" alt="Ator" />
+                            </div>
+
+                            <div class="col-md-9" style="padding-left: 0">
+                                <h4 class="inline"><b>TAREFA: </b><p class="inline">{{ readableTask.getDefinition() }}</p></h4><br>  
+                                <h4 style="margin-bottom: 3%" class="inline"><b>COMENTÁRIOS: </b></h4>    
+                                <p ng-if="!readableTask.getComment(0)">Nenhum comentário</p>   
+                                <div ng-if="readableTask.getComment(0)" ng-repeat="comment in readableTask.getAllComment()">                                    
+                                    <div class="commentBlock">      
+                                        <h5 ng-if="comment.getType() == 'rule'"><b>Tipo:</b> <p class="inline">Regra</p></h5>
+                                        <h5 ng-if="comment.getType() == 'flux'"><b>Tipo:</b> <p class="inline">Fluxo</p></h5>
+                                        <h5 ng-if="comment.getType() == 'remark'"><b>Tipo:</b> <p class="inline">Observação</p></h5>
+                                        <pclass="">{{ comment.getText() }} </p>      
+      
+                                        <div ng-controller="ModalCtrl as $ctrl" class="modal-demo">
+                                            <button class="btn btn-default pull-right blue-button" ng-click="changeComment(readableTask, comment)"><i class="material-icons">edit</i></button>
+      
+                                            <script type="text/ng-template" id="myModalChangeComment.html">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title" id="modal-title-change-comment">Editar comentário</h3>
+                                                </div>
+                                                <div class="modal-body" id="modal-body-change-comment">
+                                                    <div class="input-group">
+                                                        <span class='input-group-addon'><small>Selecione o tipo de comentário:</small></span>
+                                                        <select name='comment-type' class='form-control' id='change-comment-type-select' ng-model="changeCommentType">
+                                                            <option value='rule'>Regra</option>
+                                                            <option value='flux'>Fluxo</option>
+                                                            <option value='remark'>Observação</option>
+                                                        </select>
+                                                    </div>
+                                                    <br>
+                                                    <input type="text" ng-model="changeCommentText">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-primary blue-button" type="button" ng-click="$ctrl.change()">OK</button>
+                                                    <button class="btn btn-primary blue-button" type="button" ng-click="$ctrl.cancel()">Cancelar</button>
+                                                </div>
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <hr/>      
+                                </div> 
+                            </div>
+
+                          </div>
+                          <div class="row" style="margin-top: 3%" >     
+                            <div class="inline clickable center col-md-4 no-padding" ng-click="removeTask(readableProcess, readableTask)">
+                                <i class="material-icons inline" id="visibility-icon">delete</i><p class="inline">Remover tarefa</p>
+                            </div> 
+
+                          <div ng-controller="ModalCtrl as $ctrl" class="modal-demo">                              
+                              <div class="inline col-md-4 no-padding clickable center" ng-click="openDefinition(readableTask)">
+                                  <i class="material-icons inline" id="visibility-icon">edit</i><p class="inline">Editar nome</p>
+                              </div>                  
+                              <script type="text/ng-template" id="myModalContentDefinition.html">
+                                  <div class="modal-window">
+                                      <div class="modal-header">
+                                          <h3 class="modal-title" id="modal-title-definition">Alterar nome da tarefa</h3>
+                                      </div>
+                                      <div class="modal-body" id="modal-body-definition">
+                                          <input type="text" ng-model="newDefinition">
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button class="btn btn-primary blue-button" type="button" ng-click="$ctrl.ok('definition')">OK</button>
+                                          <button class="btn btn-primary blue-button" type="button" ng-click="$ctrl.cancel()">Cancelar</button>
+                                      </div>
+                                  </div>
+                              </script> 
+                          </div>
+
+                          <div ng-controller="ModalCtrl as $ctrl" class="modal-demo">
+                              <div class="inline clickable col-md-4 no-padding" ng-click="openComments(readableTask)">
+                                  <i class="material-icons inline" id="visibility-icon">add</i><p class="inline">Criar comentário</p>
+                              </div>   
+  
+                              <script type="text/ng-template" id="myModalContentComments.html">
+                                  <div class="modal-header">
+                                      <h3 class="modal-title" id="modal-title-comment">Adicionar comentários</h3>
+                                  </div>
+                                  <div class="modal-body" id="modal-body-comment">
+                                      <div class="input-group">
+                                          <span class='input-group-addon'><small>Selecione o tipo de comentário:</small></span>
+                                          <select name='comment-type' class='form-control' id='comment-type-select' ng-model="commentType">
+                                              <option value='rule'>Regra</option>
+                                              <option value='flux'>Fluxo</option>
+                                              <option value='remark'>Observação</option>
+                                          </select>
+                                      </div>
+                                      <br>
+                                      <input type="text" ng-model="newComment">
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button class="btn btn-primary blue-button" type="button" ng-click="$ctrl.ok('comment')">OK</button>
+                                      <button class="btn btn-primary blue-button" type="button" ng-click="$ctrl.cancel()">Cancelar</button>
+                                  </div>
+                              </script>
+                            </div>                                                  
+
+                          </div>
+                      </div>
+                    </div>
+
+              </div>
+
+          </div>
+
+          <div class="col-md-5 center">
+            <label for="processDrawer" style="cursor: pointer;">
+                <img class="draw-icon" src="./img/draw.png" alt="Desenhar o Processo"/>
+                <button id="processDrawer" style="display: none" ng-click="draw(readableProcess)"/>    
+            </label>            
+          </div>
+
+        </div>
+
+        <div id="canvasModal" class="help-modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span style="color: #385b94" class="close-box">&times;</span>
+                <a id="btnDownload">
+                    <button class="btn btn-default blue-button" ng-click="download(readableProcess)">
+                        Salvar Imagem
+                    </button>
+                </a>
+                <div class="well well-lg drawing">
+                    <canvas id="processCanvas"></canvas>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div style="margin-top: 5%" class="row" ng-if="readableProcess.getDisabledTask(0)">
+        <div class="col-md-12 well well-lg " id="disabled-activities">
+
+		  <div id="inner-disabled">
+          <div class="row">
+              <h2 class="col-md-9" style="color: #FFF; padding: 2%;">Tarefas desabilitadas</h2>
+              <!-- <button style="margin: 3% 3% 0% 0%" class="col-md-2 btn btn-primary pull-right disabledToggler blue-button" type="button" status="hidden">
+                  Mostrar tarefas desabilitadas
+              </button> -->
+          </div>
+
+                <div class="tasks" ng-repeat="readableTask in readableProcess.getDisabledTasks()">
+                    <div class="disabled-tasks">
+                        <h3>Tarefa {{$index + 1}} </h3>
+
+                        <div style="padding: 2%" class="row">
+
+                        <span>Ator:</span>
+                        <span ng-if="readableTask.getActor(0)"> {{ readableTask.getActor() }} </span>
+                        <span ng-if="!readableTask.getActor(0)"> Nenhum ator! </span>
+
+                        <br/>
+
+                        <span>Definição da tarefa :</span>
+                        <span>{{ readableTask.getDefinition() }}</span>
+
+                        <br/>
+
+                        <span>Comentários:</span>
+                        <div ng-if="readableTask.getComment(0)" ng-repeat="comment in readableTask.getAllComment()">
+                            <span>{{ comment.getText() }} </span> <br>
+                        </div>
+                        <span ng-if="!readableTask.getComment(0)"> Nenhum comentário! </span>
+
+                      </div>
+                      <div class="row">
+
+                        <button style="margin-left: 2%" class="btn btn-primary blue-button" ng-click="activateTask(readableProcess, readableTask)">
+                            Reabilitar Tarefa
+                        </button>
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+</div>
+
+<script>
+
+    $(document).on("click", ".taskToggler", function() {
+
+        if($(this).attr("status") == "hidden"){
+            $(this).find(".visibility-icon").html('visibility_off');
+            $(this).attr("status", "exposed");
+            $(this).parents('.actor').children(".tasks").css("display","inline-block");
+            $(this).find('span').html('Esconder tarefas');
+        }
+        else if($(this).attr("status") == "exposed") {
+            $(this).parents('.actor').children(".tasks").css("display","none");
+            $(this).attr("status", "hidden");
+            $(this).find(".visibility-icon").html('visibility');
+            $(this).find('span').html('Exibir tarefas');
+        }
+    });
+
+    $(document).on("click", ".disabledToggler", function() {
+
+        if($(this).attr("status") == "hidden"){
+            $(this).html("Esconder tarefas desabilitadas");
+            $(this).attr("status", "exposed");
+            $(this).parent().children(".tasks").css("display","inline-block");
+        }
+        else if($(this).attr("status") == "exposed") {
+            $(this).parent().children(".tasks").css("display","none");
+            $(this).attr("status", "hidden");
+            $(this).html("Mostrar tarefas desabilitadas");
+        }
+    });
+
+    // When the user clicks on the button, open the modal 
+    $("#myBtn").on("click", function() {
+        $("#app-description").show(1000);
+        $("#main-app").hide(1000);
+        $('#myModal').css("display", "block");
+    });
+    $(document).on("click", "#processDrawer", function() {
+        $('#canvasModal').css("display", "block");
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    $(".close-box").on("click", function() {
+        $('#myModal').css("display", "none");
+        $('#canvasModal').css("display", "none");
+    });
+    $(document).on("click", ".close-box", function() {
+        $('#myModal').css("display", "none");
+        $('#canvasModal').css("display", "none");
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    $(window).on("click", function(event) {
+        if ($(event.target).is($('#myModal'))) {
+            $('#myModal').css("display", "none");
+        }
+    });
+
+    $("#file-button").click(function(){
+        $("#app-description").hide(1000);
+    });
+
+    $(document).on("click", ".dropdown-menu-app", function(event) {
+        //event.stopPropagation();
+    });
+
+
+
+</script>
+
+
+
